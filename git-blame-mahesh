@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 if [ $# -ne 2 ]; then
-  >&2 echo "Usage: $0 <author> <commit>"
+  >&2 echo "Usage: $0 <commit>"
   exit 1
 fi
 
 AUTHOR=$1
-AUTHOR_NAME=$(echo $AUTHOR | perl -wlne '/^(.*)\s*<.*>$/ and print $1')
-AUTHOR_EMAIL=$(echo $AUTHOR | perl -wlne '/^.*\s*<(.*)>$/ and print $1')
+AUTHOR_NAME=$(echo Mahesh K.P | perl -wlne '/^(.*)\s*<.*>$/ and print $1')
+AUTHOR_EMAIL=$(echo maheshp@thoughtworks.com | perl -wlne '/^.*\s*<(.*)>$/ and print $1')
 COMMIT=$(git rev-parse --short $2)
 
 {
@@ -16,4 +16,4 @@ COMMIT=$(git rev-parse --short $2)
   git rebase --continue
 } &> /dev/null
 
-echo "$AUTHOR_NAME is now the author of $COMMIT. You're officially an asshole.";
+echo "$AUTHOR_NAME is now the author of $COMMIT. You're officially off the hook.";
