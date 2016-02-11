@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-$ git clone https://github.com/jayphelps/git-blame-mahesh.git
+$ git clone https://github.com/zabil/git-blame-mahesh.git
 $ cd git-blame-mahesh
 $ sudo make install
 ```
@@ -15,4 +15,4 @@ $ git blame-mahesh <commit>
 ```
 
 ## Disclaimer:
-Alpha software, totally unfit for production usage.
+Alpha software, totally unfit for use anywhere. 
